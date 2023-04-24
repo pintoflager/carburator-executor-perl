@@ -17,7 +17,8 @@ if ! carburator has program perl; then
     carburator print terminal error \
         "Missing required program perl. Trying to install..."
 else
-    exit
+    carburator print terminal success "Perl found from the $role"
+    exit 0
 fi
 
 # TODO: Untested below
