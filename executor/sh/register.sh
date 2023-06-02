@@ -23,20 +23,20 @@ fi
 
 # TODO: Untested below
 if carburator has program apt; then
-    carburator sudo apt update
-    carburator sudo apt -y install perl
+    apt-get -y update
+    apt-get -y install perl
 
 elif carburator has program pacman; then
-    carburator sudo pacman update
-    carburator sudo pacman -Suy perl
+    pacman update
+    pacman -Suy perl
 
 elif carburator has program yum; then
-    carburator sudo yum makecache --refresh
-    carburator sudo yum install perl
+    yum makecache --refresh
+    yum install perl
 
 elif carburator has program dnf; then
-    carburator sudo dnf makecache --refresh
-    carburator sudo dnf -y install perl-core
+    dnf makecache --refresh
+    dnf -y install perl-core
 
 else
     carburator print terminal error \
