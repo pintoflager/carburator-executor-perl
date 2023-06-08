@@ -28,7 +28,7 @@ if carburator has program apt; then
 
 elif carburator has program pacman; then
     pacman update
-    pacman -Suy perl
+    pacman -Sy perl
 
 elif carburator has program yum; then
     yum makecache --refresh
